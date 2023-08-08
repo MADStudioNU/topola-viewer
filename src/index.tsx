@@ -11,7 +11,7 @@ import {detect} from 'detect-browser';
 import {HashRouter as Router, Route} from 'react-router-dom';
 import {IntlProvider} from 'react-intl';
 import {MediaContextProvider, mediaStyles} from './util/media';
-import './index.css';
+import './styles/index.scss';
 import 'semantic-ui-css/semantic.min.css';
 import 'canvas-toBlob';
 
@@ -24,8 +24,10 @@ const messages = {
   ru: messages_ru,
 };
 const language = navigator.language && navigator.language.split(/[-_]/)[0];
+console.log(language);
 
 const browser = detect();
+console.log(browser);
 
 if (browser && browser.name === 'ie') {
   ReactDOM.render(
