@@ -532,33 +532,33 @@ export function App() {
 
   return (
     <>
-      <Route
-        render={() => (
-          <TopBar
-            data={data?.chartData}
-            allowAllRelativesChart={
-              sourceSpec?.source !== DataSourceEnum.WIKITREE
-            }
-            showingChart={
-              history.location.pathname === '/view' &&
-              (state === AppState.SHOWING_CHART ||
-                state === AppState.LOADING_MORE)
-            }
-            standalone={standalone}
-            eventHandlers={{
-              onSelection,
-              onPrint,
-              onDownloadPdf,
-              onDownloadPng,
-              onDownloadSvg,
-            }}
-            showWikiTreeMenus={
-              sourceSpec?.source === DataSourceEnum.WIKITREE &&
-              showWikiTreeMenus
-            }
-          />
-        )}
-      />
+      {/*<Route*/}
+      {/*  render={() => (*/}
+      {/*    <TopBar*/}
+      {/*      data={data?.chartData}*/}
+      {/*      allowAllRelativesChart={*/}
+      {/*        sourceSpec?.source !== DataSourceEnum.WIKITREE*/}
+      {/*      }*/}
+      {/*      showingChart={*/}
+      {/*        history.location.pathname === '/view' &&*/}
+      {/*        (state === AppState.SHOWING_CHART ||*/}
+      {/*          state === AppState.LOADING_MORE)*/}
+      {/*      }*/}
+      {/*      standalone={standalone}*/}
+      {/*      eventHandlers={{*/}
+      {/*        onSelection,*/}
+      {/*        onPrint,*/}
+      {/*        onDownloadPdf,*/}
+      {/*        onDownloadPng,*/}
+      {/*        onDownloadSvg,*/}
+      {/*      }}*/}
+      {/*      showWikiTreeMenus={*/}
+      {/*        sourceSpec?.source === DataSourceEnum.WIKITREE &&*/}
+      {/*        showWikiTreeMenus*/}
+      {/*      }*/}
+      {/*    />*/}
+      {/*  )}*/}
+      {/*/>*/}
       <Switch>
         <Route exact path="/" component={Intro} />
         <Route exact path="/view" render={renderMainArea} />

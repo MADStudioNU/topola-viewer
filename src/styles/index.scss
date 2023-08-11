@@ -233,15 +233,59 @@ div.zoom {
 }
 
 /* The Pulter Project Customizations */
+#svgContainer {
+  background: #1c1512 linear-gradient(0deg, #372a24 0, #1f1714 100%);
+}
+
 .node {
   .indi {
+    position: relative;
+    overflow: hidden;
+
+    .background {
+      fill: #282828;
+      transition: fill .2s;
+    }
+
     .border {
-      stroke: thistle;
+      stroke: #444;
+      stroke-width: 1;
+      //rx: 10;
     }
 
     .name {
-      fill: firebrick;
       font-family: 'Helvetica Neue', Helvetica, sans-serif;
+      fill: whitesmoke;
+    }
+
+    //image {
+    //  transform: none;
+    //  position: absolute;
+    //  bottom: 0;
+    //  right: 0;
+    //  display: block;
+    //}
+
+    /* Individual nodes */
+    &[data-gedcom-id=I1] {
+      .background {
+        fill: darkgoldenrod;
+      }
+
+      .name {
+        fill: #000;
+      }
+
+      .border {
+        //stroke: darkgoldenrod;
+        //stroke-width: 4px;
+      }
+    }
+
+    &:hover {
+      .background {
+        fill: darken(whitesmoke, 10%);
+      }
     }
   }
 }

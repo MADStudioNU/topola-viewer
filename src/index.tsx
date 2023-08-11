@@ -24,15 +24,12 @@ const messages = {
   ru: messages_ru,
 };
 const language = navigator.language && navigator.language.split(/[-_]/)[0];
-console.log(language);
-
 const browser = detect();
-console.log(browser);
 
 if (browser && browser.name === 'ie') {
   ReactDOM.render(
     <p>
-      Topola Genealogy Viewer does not support Internet Explorer. Please try a
+      This family tree viewer does not support Internet Explorer. Please try a
       different (modern) browser.
     </p>,
     document.querySelector('#root'),

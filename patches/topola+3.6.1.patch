@@ -1,8 +1,21 @@
+diff --git a/node_modules/topola/.DS_Store b/node_modules/topola/.DS_Store
+new file mode 100644
+index 0000000..9498e50
+Binary files /dev/null and b/node_modules/topola/.DS_Store differ
 diff --git a/node_modules/topola/dist/detailed-renderer.js b/node_modules/topola/dist/detailed-renderer.js
-index 242d518..0bc9897 100644
+index 242d518..d364100 100644
 --- a/node_modules/topola/dist/detailed-renderer.js
 +++ b/node_modules/topola/dist/detailed-renderer.js
-@@ -184,11 +184,16 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -31,7 +31,7 @@ var IMAGE_WIDTH = 70;
+ var IMAGE_HEIGHT = 90;
+ var DETAILS_HEIGHT = 14;
+ var ANIMATION_DELAY_MS = 200;
+-var ANIMATION_DURATION_MS = 500;
++var ANIMATION_DURATION_MS = 400;
+ var textLengthCache = new Map();
+ /** Calculates the length of the given text in pixels when rendered. */
+ function getLength(text, textClass) {
+@@ -184,12 +184,18 @@ var DetailedRenderer = /** @class */ (function (_super) {
                  });
              }
              return result;
@@ -14,14 +27,17 @@ index 242d518..0bc9897 100644
              .enter()
              .append('g')
 -            .attr('class', 'indi');
+-        this.transition(indiEnter.merge(indiUpdate)).attr('transform', function (node) { return "translate(" + node.xOffset + ", " + node.yOffset + ")"; });
 +            .attr('class', 'indi')
 +            .attr('data-gedcom-id', function(node) {
 +                return node.indi.id;
 +            });
-         this.transition(indiEnter.merge(indiUpdate)).attr('transform', function (node) { return "translate(" + node.xOffset + ", " + node.yOffset + ")"; });
++        this.transition(indiEnter.merge(indiUpdate)).attr('transform',
++          function (node) { return "translate(" + node.xOffset + ", " + node.yOffset + ")"; });
          this.renderIndi(indiEnter, indiUpdate);
          var familyEnter = enter
-@@ -208,7 +213,7 @@ var DetailedRenderer = /** @class */ (function (_super) {
+             .select(function (node) {
+@@ -208,7 +214,7 @@ var DetailedRenderer = /** @class */ (function (_super) {
          this.renderFamily(familyEnter, familyUpdate);
      };
      DetailedRenderer.prototype.getCss = function () {
@@ -30,3 +46,45 @@ index 242d518..0bc9897 100644
      };
      DetailedRenderer.prototype.transition = function (selection) {
          return this.options.animate
+@@ -264,22 +270,27 @@ var DetailedRenderer = /** @class */ (function (_super) {
+         this.transition(background)
+             .attr('width', function (node) { return node.indi.width; })
+             .attr('height', function (node) { return node.indi.height; });
++
+         // Clip path.
+         var getClipId = function (id) { return "clip-" + id; };
+         enter
+             .append('clipPath')
+             .attr('id', function (node) { return getClipId(node.indi.id); })
+             .append('rect')
+-            .attr('rx', 5)
++            .attr('rx', IMAGE_WIDTH / 2)
++            .attr('ry', IMAGE_WIDTH / 2)
+             .merge(update.select('clipPath rect'))
+-            .attr('width', function (node) { return node.indi.width; })
+-            .attr('height', function (node) { return node.indi.height; });
++            // .attr('width', function (node) { return node.indi.width; })
++            // .attr('height', function (node) { return node.indi.height; });
++            .attr('width', function (node) { return IMAGE_WIDTH; })
++            .attr('height', function (node) { return IMAGE_WIDTH; });
+         var getIndi = function (data) {
+             return _this.options.data.getIndi(data.indi.id);
+         };
+         var getDetailsWidth = function (data) {
+             return data.indi.width - (getIndi(data).getImageUrl() ? IMAGE_WIDTH : 0);
+         };
++
+         // Name.
+         enter
+             .append('text')
+@@ -346,7 +357,9 @@ var DetailedRenderer = /** @class */ (function (_super) {
+             .attr('width', IMAGE_WIDTH)
+             .attr('height', function (data) { return data.indi.height; })
+             .attr('preserveAspectRatio', 'xMidYMin')
+-            .attr('transform', function (data) { return "translate(" + (data.indi.width - IMAGE_WIDTH) + ", 0)"; })
++            .attr('transform', function (data) {
++                return "translate(" + (data.indi.width - IMAGE_WIDTH - 6) + ", " + (data.indi.height - IMAGE_WIDTH) / 2 + ")";
++            })
+             .attr('clip-path', function (data) { return "url(#" + getClipId(data.indi.id) + ")"; })
+             .attr('href', function (data) { return getIndi(data).getImageUrl(); });
+         // Border on top.
