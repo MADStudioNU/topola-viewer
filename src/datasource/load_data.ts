@@ -4,6 +4,9 @@ import {DataSource, DataSourceEnum, SourceSelection} from './data_source';
 import {IndiInfo, JsonGedcomData} from 'topola';
 import {TopolaError} from '../util/error';
 
+// TPP .ged data fixture location
+const PULTER_TREE_GEDCOM_URL: string = './data/pulter.ged';
+
 /**
  * Returns a valid IndiInfo object, either with the given indi and generation
  * or with an individual taken from the data and generation 0.
@@ -41,33 +44,34 @@ export async function loadFromUrl(
   url: string,
   handleCors: boolean,
 ): Promise<TopolaData> {
-  try {
-    const cachedData = sessionStorage.getItem(url);
-    if (cachedData) {
-      return JSON.parse(cachedData);
-    }
-  } catch (e) {
-    console.warn('Failed to load data from session storage: ' + e);
-  }
+  // try {
+  //   const cachedData = sessionStorage.getItem(url);
+  //   if (cachedData) {
+  //     return JSON.parse(cachedData);
+  //   }
+  // } catch (e) {
+  //   console.warn('Failed to load data from session storage: ' + e);
+  // }
 
-  const driveUrlMatch1 = url.match(
-    /https:\/\/drive\.google\.com\/file\/d\/(.*)\/.*/,
-  );
-  if (driveUrlMatch1) {
-    url = `https://drive.google.com/uc?id=${driveUrlMatch1[1]}&export=download`;
-  }
-  const driveUrlMatch2 = url.match(
-    /https:\/\/drive\.google\.com\/open\?id=([^&]*)&?.*/,
-  );
-  if (driveUrlMatch2) {
-    url = `https://drive.google.com/uc?id=${driveUrlMatch2[1]}&export=download`;
-  }
+  // const driveUrlMatch1 = url.match(
+  //   /https:\/\/drive\.google\.com\/file\/d\/(.*)\/.*/,
+  // );
+  // if (driveUrlMatch1) {
+  //   url = `https://drive.google.com/uc?id=${driveUrlMatch1[1]}&export=download`;
+  // }
+  // const driveUrlMatch2 = url.match(
+  //   /https:\/\/drive\.google\.com\/open\?id=([^&]*)&?.*/,
+  // );
+  // if (driveUrlMatch2) {
+  //   url = `https://drive.google.com/uc?id=${driveUrlMatch2[1]}&export=download`;
+  // }
+  //
+  // const urlToFetch = handleCors
+  //   ? 'https://topola-cors-server.up.railway.app/' + url
+  //   : url;
 
-  const urlToFetch = handleCors
-    ? 'https://topola-cors-server.up.railway.app/' + url
-    : url;
-
-  const response = await window.fetch(urlToFetch);
+  // const response = await window.fetch(urlToFetch);
+  const response = await window.fetch(PULTER_TREE_GEDCOM_URL);
   if (response.status !== 200) {
     throw new Error(response.statusText);
   }
@@ -126,14 +130,14 @@ export class UploadedDataSource implements DataSource<UploadSourceSpec> {
         source.spec.gedcom,
         source.spec.images,
       );
-      const software = getSoftware(data.gedcom.head);
-      analyticsEvent('upload_file_loaded', {
-        event_label: software,
-        event_value: (source.spec.images && source.spec.images.size) || 0,
-      });
+      // const software = getSoftware(data.gedcom.head);
+      // analyticsEvent('upload_file_loaded', {
+      //   event_label: software,
+      //   event_value: (source.spec.images && source.spec.images.size) || 0,
+      // });
       return data;
     } catch (error) {
-      analyticsEvent('upload_file_error');
+      // analyticsEvent('upload_file_error');
       throw error;
     }
   }
