@@ -250,7 +250,7 @@ export function App() {
       return true;
     }
     const newSource = {spec: newSourceSpec, selection: newSelection};
-    const oldSouce = {
+    const oldSource = {
       spec: sourceSpec,
       selection: selection,
     };
@@ -258,25 +258,25 @@ export function App() {
       case DataSourceEnum.UPLOADED:
         return uploadedDataSource.isNewData(
           newSource as SourceSelection<UploadSourceSpec>,
-          oldSouce as SourceSelection<UploadSourceSpec>,
+          oldSource as SourceSelection<UploadSourceSpec>,
           data,
         );
       case DataSourceEnum.GEDCOM_URL:
         return gedcomUrlDataSource.isNewData(
           newSource as SourceSelection<UrlSourceSpec>,
-          oldSouce as SourceSelection<UrlSourceSpec>,
+          oldSource as SourceSelection<UrlSourceSpec>,
           data,
         );
       case DataSourceEnum.WIKITREE:
         return wikiTreeDataSource.isNewData(
           newSource as SourceSelection<WikiTreeSourceSpec>,
-          oldSouce as SourceSelection<WikiTreeSourceSpec>,
+          oldSource as SourceSelection<WikiTreeSourceSpec>,
           data,
         );
       case DataSourceEnum.EMBEDDED:
         return embeddedDataSource.isNewData(
           newSource as SourceSelection<EmbeddedSourceSpec>,
-          oldSouce as SourceSelection<EmbeddedSourceSpec>,
+          oldSource as SourceSelection<EmbeddedSourceSpec>,
           data,
         );
     }
@@ -475,22 +475,22 @@ export function App() {
               <Details gedcom={data!.gedcom} indi={updatedSelection.id} />
             ),
           },
-          {
-            menuItem: intl.formatMessage({
-              id: 'tab.settings',
-              defaultMessage: 'Settings',
-            }),
-            render: () => (
-              <ConfigPanel
-                config={config}
-                onChange={(config) => {
-                  setConfig(config);
-                  toggleDetails(config, data);
-                  updateUrl(configToArgs(config));
-                }}
-              />
-            ),
-          },
+          // {
+          //   menuItem: intl.formatMessage({
+          //     id: 'tab.settings',
+          //     defaultMessage: 'Settings',
+          //   }),
+          //   render: () => (
+          //     <ConfigPanel
+          //       config={config}
+          //       onChange={(config) => {
+          //         setConfig(config);
+          //         toggleDetails(config, data);
+          //         updateUrl(configToArgs(config));
+          //       }}
+          //     />
+          //   ),
+          // },
         ];
         return (
           <div id="content">
@@ -534,29 +534,30 @@ export function App() {
     <>
       <Route
         render={() => (
-          <TopBar
-            data={data?.chartData}
-            allowAllRelativesChart={
-              sourceSpec?.source !== DataSourceEnum.WIKITREE
-            }
-            showingChart={
-              history.location.pathname === '/view' &&
-              (state === AppState.SHOWING_CHART ||
-                state === AppState.LOADING_MORE)
-            }
-            standalone={standalone}
-            eventHandlers={{
-              onSelection,
-              onPrint,
-              onDownloadPdf,
-              onDownloadPng,
-              onDownloadSvg,
-            }}
-            showWikiTreeMenus={
-              sourceSpec?.source === DataSourceEnum.WIKITREE &&
-              showWikiTreeMenus
-            }
-          />
+          <div></div>
+          // <TopBar
+          //   data={data?.chartData}
+          //   allowAllRelativesChart={
+          //     sourceSpec?.source !== DataSourceEnum.WIKITREE
+          //   }
+          //   showingChart={
+          //     history.location.pathname === '/view' &&
+          //     (state === AppState.SHOWING_CHART ||
+          //       state === AppState.LOADING_MORE)
+          //   }
+          //   standalone={standalone}
+          //   eventHandlers={{
+          //     onSelection,
+          //     onPrint,
+          //     onDownloadPdf,
+          //     onDownloadPng,
+          //     onDownloadSvg,
+          //   }}
+          //   showWikiTreeMenus={
+          //     sourceSpec?.source === DataSourceEnum.WIKITREE &&
+          //     showWikiTreeMenus
+          //   }
+          // />
         )}
       />
       <Switch>
