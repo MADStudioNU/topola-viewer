@@ -92,9 +92,7 @@
     "not op_mini all"
   ],
   "eslintConfig": {
-    "extends": [
-
-    ],
+    "extends": [],
     "rules": {
       "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/no-use-before-define": "off"
