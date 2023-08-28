@@ -1,52 +1,30 @@
-import * as H from 'history';
-import * as queryString from 'query-string';
-import {analyticsEvent} from './util/analytics';
-import {Changelog} from './changelog';
-import {DataSourceEnum, SourceSelection} from './datasource/data_source';
-import {Details} from './details/details';
-import {EmbeddedDataSource, EmbeddedSourceSpec} from './datasource/embedded';
-import {FormattedMessage, useIntl} from 'react-intl';
-import {getI18nMessage} from './util/error_i18n';
-import {IndiInfo} from 'topola';
-import {Intro} from './intro';
-import {Loader, Message, Portal, Tab} from 'semantic-ui-react';
-import {Media} from './util/media';
-import {Redirect, Route, Switch} from 'react-router-dom';
-import {TopBar} from './menu/top_bar';
-import {TopolaData} from './util/gedcom_util';
-import {useEffect, useState} from 'react';
-import {useHistory, useLocation} from 'react-router';
-import {idToIndiMap} from './util/gedcom_util';
+import * as H from "history";
+import * as queryString from "query-string";
+import { analyticsEvent } from "./util/analytics";
+import { Changelog } from "./changelog";
+import { DataSourceEnum, SourceSelection } from "./datasource/data_source";
+import { Details } from "./details/details";
+import { EmbeddedDataSource, EmbeddedSourceSpec } from "./datasource/embedded";
+import { FormattedMessage, useIntl } from "react-intl";
+import { getI18nMessage } from "./util/error_i18n";
+import { IndiInfo } from "topola";
+import { Intro } from "./intro";
+import { Loader, Message, Portal, Tab } from "semantic-ui-react";
+import { Media } from "./util/media";
+import { Redirect, Route, Switch } from "react-router-dom";
+import { idToIndiMap, TopolaData } from "./util/gedcom_util";
+import { useEffect, useState } from "react";
+import { useHistory, useLocation } from "react-router";
+import { Chart, ChartType, downloadPdf, downloadPng, downloadSvg, printChart } from "./chart";
+import { argsToConfig, Config, ConfigPanel, configToArgs, DEFAULT_CONFIG, Ids, Sex } from "./config";
 import {
-  Chart,
-  ChartType,
-  downloadPdf,
-  downloadPng,
-  downloadSvg,
-  printChart,
-} from './chart';
-import {
-  argsToConfig,
-  Config,
-  ConfigPanel,
-  configToArgs,
-  DEFALUT_CONFIG,
-  Ids,
-  Sex,
-} from './config';
-import {
-  getSelection,
-  UploadSourceSpec,
-  UrlSourceSpec,
   GedcomUrlDataSource,
+  getSelection,
   UploadedDataSource,
-} from './datasource/load_data';
-import {
-  loadWikiTree,
-  PRIVATE_ID_PREFIX,
-  WikiTreeDataSource,
-  WikiTreeSourceSpec,
-} from './datasource/wikitree';
+  UploadSourceSpec,
+  UrlSourceSpec
+} from "./datasource/load_data";
+import { loadWikiTree, PRIVATE_ID_PREFIX, WikiTreeDataSource, WikiTreeSourceSpec } from "./datasource/wikitree";
 
 /** Shows an error message in the middle of the screen. */
 function ErrorMessage(props: {message?: string}) {
@@ -203,7 +181,7 @@ export function App() {
   const [sourceSpec, setSourceSpec] = useState<DataSourceSpec>();
   /** Freeze animations after initial chart render. */
   const [freezeAnimation, setFreezeAnimation] = useState(false);
-  const [config, setConfig] = useState(DEFALUT_CONFIG);
+  const [config, setConfig] = useState(DEFAULT_CONFIG);
 
   const intl = useIntl();
   const history = useHistory();
@@ -469,28 +447,28 @@ export function App() {
           {
             menuItem: intl.formatMessage({
               id: 'tab.info',
-              defaultMessage: 'Info',
+              defaultMessage: 'Information',
             }),
             render: () => (
               <Details gedcom={data!.gedcom} indi={updatedSelection.id} />
             ),
           },
-          // {
-          //   menuItem: intl.formatMessage({
-          //     id: 'tab.settings',
-          //     defaultMessage: 'Settings',
-          //   }),
-          //   render: () => (
-          //     <ConfigPanel
-          //       config={config}
-          //       onChange={(config) => {
-          //         setConfig(config);
-          //         toggleDetails(config, data);
-          //         updateUrl(configToArgs(config));
-          //       }}
-          //     />
-          //   ),
-          // },
+          {
+            menuItem: intl.formatMessage({
+              id: 'tab.settings',
+              defaultMessage: 'Settings',
+            }),
+            render: () => (
+              <ConfigPanel
+                config={config}
+                onChange={(config) => {
+                  setConfig(config);
+                  toggleDetails(config, data);
+                  updateUrl(configToArgs(config));
+                }}
+              />
+            ),
+          },
         ];
         return (
           <div id="content">
@@ -508,15 +486,19 @@ export function App() {
               chartType={chartType}
               onSelection={onSelection}
               freezeAnimation={freezeAnimation}
+              // todo: adjust below
               colors={config.color}
               hideIds={config.id}
               hideSex={config.sex}
             />
-            {showSidePanel ? (
-              <Media greaterThanOrEqual="large" className="sidePanel">
-                <Tab panes={sidePanelTabs} />
-              </Media>
-            ) : null}
+            <div className="sidePanel">
+              <Details gedcom={data!.gedcom} indi={updatedSelection.id} />
+            </div>
+            {/*{showSidePanel ? (*/}
+            {/*  <Media greaterThanOrEqual="small" className="sidePanel">*/}
+            {/*    <Tab panes={sidePanelTabs} />*/}
+            {/*  </Media>*/}
+            {/*) : null}*/}
             <Changelog />
           </div>
         );

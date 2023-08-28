@@ -62,7 +62,7 @@ const EVENT_TAGS = [
   'BIRT',
   'BAPM',
   'CHR',
-  'FAMS',
+  // 'FAMS',
   'EVEN',
   'CENS',
   'DEAT',

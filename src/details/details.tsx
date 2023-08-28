@@ -156,12 +156,16 @@ export function Details(props: Props) {
 
   return (
     <div className="details">
-      <Item.Group divided>
-        {getDetails(entries, ['NAME'], nameDetails)}
+      <Item.Group>
+        <div className="details__name">
+          {getDetails(entries, ['NAME'], nameDetails)}
+        </div>
         {getDetails(entriesWithData, ['OBJE'], fileDetails)}
         <Events gedcom={props.gedcom} entries={entries} indi={props.indi} />
         {getOtherDetails(entriesWithData)}
-        {getDetails(entriesWithData, ['NOTE'], noteDetails)}
+        <div className="details__notes">
+          {getDetails(entriesWithData, ['NOTE'], noteDetails)}
+        </div>
       </Item.Group>
     </div>
   );

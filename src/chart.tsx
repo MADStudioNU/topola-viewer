@@ -417,31 +417,36 @@ export function Chart(props: ChartProps) {
   const intl = useIntl();
 
   useEffect(() => {
-    if (prevProps) {
-      const initialRender =
-        props.chartType !== prevProps?.chartType ||
-        props.colors !== prevProps?.colors ||
-        props.hideIds !== prevProps?.hideIds ||
-        props.hideSex !== prevProps?.hideSex;
-      const resetPosition =
-        props.chartType !== prevProps?.chartType ||
-        props.data !== prevProps.data ||
-        props.selection !== prevProps.selection;
-      chartWrapper.current.renderChart(props, intl, {
-        initialRender,
-        resetPosition,
-      });
-    } else {
-      chartWrapper.current.renderChart(props, intl, {
-        initialRender: true,
-        resetPosition: true,
-      });
-    }
+    // if (prevProps) {
+    //   const initialRender =
+    //     props.chartType !== prevProps?.chartType ||
+    //     props.colors !== prevProps?.colors ||
+    //     props.hideIds !== prevProps?.hideIds ||
+    //     props.hideSex !== prevProps?.hideSex;
+    //   const resetPosition =
+    //     props.chartType !== prevProps?.chartType ||
+    //     props.data !== prevProps.data ||
+    //     props.selection !== prevProps.selection;
+    //   chartWrapper.current.renderChart(props, intl, {
+    //     initialRender,
+    //     resetPosition,
+    //   });
+    // } else {
+    //   chartWrapper.current.renderChart(props, intl, {
+    //     initialRender: true,
+    //     resetPosition: true,
+    //   });
+    // }
+
+    chartWrapper.current.renderChart(props, intl, {
+      initialRender: true,
+      resetPosition: true,
+    });
   });
 
   return (
     <div id="svgContainer">
-      <Media greaterThanOrEqual="large" className="zoom">
+      <Media greaterThanOrEqual="small" className="zoom">
         <button
           className="zoom-in"
           onClick={() => chartWrapper.current.zoom(ZOOM_FACTOR)}
