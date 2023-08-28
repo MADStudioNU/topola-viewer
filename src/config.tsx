@@ -58,10 +58,16 @@ export function argsToConfig(args: ParsedQuery<any>): Config {
     return typeof value === 'string' ? value : undefined;
   };
 
+  // return {
+  //   color: COLOR_ARG.get(getParam('c') ?? '') ?? DEFAULT_CONFIG.color,
+  //   id: ID_ARG.get(getParam('i') ?? '') ?? DEFAULT_CONFIG.id,
+  //   sex: SEX_ARG.get(getParam('s') ?? '') ?? DEFAULT_CONFIG.sex,
+  // };
+
   return {
-    color: COLOR_ARG.get(getParam('c') ?? '') ?? DEFAULT_CONFIG.color,
-    id: ID_ARG.get(getParam('i') ?? '') ?? DEFAULT_CONFIG.id,
-    sex: SEX_ARG.get(getParam('s') ?? '') ?? DEFAULT_CONFIG.sex,
+    color: DEFAULT_CONFIG.color,
+    id: DEFAULT_CONFIG.id,
+    sex: DEFAULT_CONFIG.sex,
   };
 }
 

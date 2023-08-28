@@ -376,5 +376,9 @@ div.zoom {
     .nocolor {
       fill: #B1AEA0;
     }
+
+    .details {
+      fill: darken($pp_manuscriptInk, 5%);
+    }
   }
 }

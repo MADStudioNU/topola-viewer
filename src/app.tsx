@@ -487,9 +487,9 @@ export function App() {
               onSelection={onSelection}
               freezeAnimation={freezeAnimation}
               // todo: adjust below
-              colors={config.color}
-              hideIds={config.id}
-              hideSex={config.sex}
+              colors={0}
+              hideIds={0}
+              hideSex={0}
             />
             <div className="sidePanel">
               <Details gedcom={data!.gedcom} indi={updatedSelection.id} />
