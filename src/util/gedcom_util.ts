@@ -286,8 +286,9 @@ export function getName(person: GedcomEntry): string | undefined {
 export function getFileName(fileEntry: GedcomEntry): string | undefined {
   const fileTitle = fileEntry?.tree.find((entry) => entry.tag === 'TITL')?.data;
 
-  const fileExtension = fileEntry?.tree.find((entry) => entry.tag === 'FORM')
-    ?.data;
+  const fileExtension = fileEntry?.tree.find(
+    (entry) => entry.tag === 'FORM',
+  )?.data;
 
   return fileTitle && fileExtension && fileTitle + '.' + fileExtension;
 }
@@ -298,7 +299,7 @@ export function getImageFileEntry(
   return objectEntry.tree.find(
     (entry) =>
       entry.tag === 'FILE' &&
-      entry.data.startsWith('http') &&
+      // entry.data.startsWith('http') &&
       isImageFile(entry.data),
   );
 }

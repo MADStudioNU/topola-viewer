@@ -4,7 +4,7 @@ import {
   GedcomData,
   getData,
   getFileName,
-  getImageFileEntry
+  getImageFileEntry,
 } from '../util/gedcom_util';
 import {Events} from './events';
 import {GedcomEntry} from 'parse-gedcom';
@@ -160,7 +160,9 @@ export function Details(props: Props) {
         <div className="details__name">
           {getDetails(entries, ['NAME'], nameDetails)}
         </div>
-        {getDetails(entriesWithData, ['OBJE'], fileDetails)}
+        <div className="details__image">
+          {getDetails(entriesWithData, ['OBJE'], fileDetails)}
+        </div>
         <Events gedcom={props.gedcom} entries={entries} indi={props.indi} />
         {getOtherDetails(entriesWithData)}
         <div className="details__notes">

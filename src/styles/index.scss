@@ -102,7 +102,7 @@ div.ui.card.intro {
 .backgroundImage {
   width: 100%;
   height: 100%;
-  background-image: url(../topola.jpg);
+  //background-image: url(../topola.jpg);
   background-size: cover;
   background-position: 0% 20%;
   position: fixed;
@@ -243,9 +243,8 @@ div.zoom {
 }
 
 .details .person-image {
-  max-width: 289px;
-  width: 289px;
-  padding: 0 10px;
+  max-width: 100%;
+  display: block;
 }
 
 .ui.form .field.no-margin {

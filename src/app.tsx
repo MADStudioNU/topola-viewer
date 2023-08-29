@@ -1,30 +1,50 @@
-import * as H from "history";
-import * as queryString from "query-string";
-import { analyticsEvent } from "./util/analytics";
-import { Changelog } from "./changelog";
-import { DataSourceEnum, SourceSelection } from "./datasource/data_source";
-import { Details } from "./details/details";
-import { EmbeddedDataSource, EmbeddedSourceSpec } from "./datasource/embedded";
-import { FormattedMessage, useIntl } from "react-intl";
-import { getI18nMessage } from "./util/error_i18n";
-import { IndiInfo } from "topola";
-import { Intro } from "./intro";
-import { Loader, Message, Portal, Tab } from "semantic-ui-react";
-import { Media } from "./util/media";
-import { Redirect, Route, Switch } from "react-router-dom";
-import { idToIndiMap, TopolaData } from "./util/gedcom_util";
-import { useEffect, useState } from "react";
-import { useHistory, useLocation } from "react-router";
-import { Chart, ChartType, downloadPdf, downloadPng, downloadSvg, printChart } from "./chart";
-import { argsToConfig, Config, ConfigPanel, configToArgs, DEFAULT_CONFIG, Ids, Sex } from "./config";
+import * as H from 'history';
+import * as queryString from 'query-string';
+import {analyticsEvent} from './util/analytics';
+import {Changelog} from './changelog';
+import {DataSourceEnum, SourceSelection} from './datasource/data_source';
+import {Details} from './details/details';
+import {EmbeddedDataSource, EmbeddedSourceSpec} from './datasource/embedded';
+import {FormattedMessage, useIntl} from 'react-intl';
+import {getI18nMessage} from './util/error_i18n';
+import {IndiInfo} from 'topola';
+import {Intro} from './intro';
+import {Loader, Message, Portal, Tab} from 'semantic-ui-react';
+import {Media} from './util/media';
+import {Redirect, Route, Switch} from 'react-router-dom';
+import {idToIndiMap, TopolaData} from './util/gedcom_util';
+import {useEffect, useState} from 'react';
+import {useHistory, useLocation} from 'react-router';
+import {
+  Chart,
+  ChartType,
+  downloadPdf,
+  downloadPng,
+  downloadSvg,
+  printChart,
+} from './chart';
+import {
+  argsToConfig,
+  Config,
+  ConfigPanel,
+  configToArgs,
+  DEFAULT_CONFIG,
+  Ids,
+  Sex,
+} from './config';
 import {
   GedcomUrlDataSource,
   getSelection,
   UploadedDataSource,
   UploadSourceSpec,
-  UrlSourceSpec
-} from "./datasource/load_data";
-import { loadWikiTree, PRIVATE_ID_PREFIX, WikiTreeDataSource, WikiTreeSourceSpec } from "./datasource/wikitree";
+  UrlSourceSpec,
+} from './datasource/load_data';
+import {
+  loadWikiTree,
+  PRIVATE_ID_PREFIX,
+  WikiTreeDataSource,
+  WikiTreeSourceSpec,
+} from './datasource/wikitree';
 
 /** Shows an error message in the middle of the screen. */
 function ErrorMessage(props: {message?: string}) {
@@ -443,33 +463,33 @@ export function App() {
       case AppState.SHOWING_CHART:
       case AppState.LOADING_MORE:
         const updatedSelection = getSelection(data!.chartData, selection);
-        const sidePanelTabs = [
-          {
-            menuItem: intl.formatMessage({
-              id: 'tab.info',
-              defaultMessage: 'Information',
-            }),
-            render: () => (
-              <Details gedcom={data!.gedcom} indi={updatedSelection.id} />
-            ),
-          },
-          {
-            menuItem: intl.formatMessage({
-              id: 'tab.settings',
-              defaultMessage: 'Settings',
-            }),
-            render: () => (
-              <ConfigPanel
-                config={config}
-                onChange={(config) => {
-                  setConfig(config);
-                  toggleDetails(config, data);
-                  updateUrl(configToArgs(config));
-                }}
-              />
-            ),
-          },
-        ];
+        // const sidePanelTabs = [
+        //   {
+        //     menuItem: intl.formatMessage({
+        //       id: 'tab.info',
+        //       defaultMessage: 'Information',
+        //     }),
+        //     render: () => (
+        //       <Details gedcom={data!.gedcom} indi={updatedSelection.id} />
+        //     ),
+        //   },
+        //   {
+        //     menuItem: intl.formatMessage({
+        //       id: 'tab.settings',
+        //       defaultMessage: 'Settings',
+        //     }),
+        //     render: () => (
+        //       <ConfigPanel
+        //         config={config}
+        //         onChange={(config) => {
+        //           setConfig(config);
+        //           toggleDetails(config, data);
+        //           updateUrl(configToArgs(config));
+        //         }}
+        //       />
+        //     ),
+        //   },
+        // ];
         return (
           <div id="content">
             <ErrorPopup
@@ -486,7 +506,6 @@ export function App() {
               chartType={chartType}
               onSelection={onSelection}
               freezeAnimation={freezeAnimation}
-              // todo: adjust below
               colors={0}
               hideIds={0}
               hideSex={0}
