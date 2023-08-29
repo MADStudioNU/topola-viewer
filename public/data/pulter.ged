@@ -963,7 +963,7 @@
 1 HUSB @I21@
 1 CHIL @I51@
 0 @X4@ OBJE
-1 FILE ./data/hester-pulter.jpg
+1 FILE http://localhost:3000/data/hester-pulter.jpg
 2 FORM JPG
 1 CHAN
 2 DATE 29 AUG 2023
