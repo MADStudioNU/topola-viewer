@@ -79,6 +79,7 @@ function noteDetails(entry: GedcomEntry) {
 }
 
 function nameDetails(entry: GedcomEntry) {
+  console.log(entry);
   const fullName = entry.data.replaceAll('/', '');
 
   const nameType = entry.tree.find(
@@ -149,6 +150,10 @@ interface Props {
 }
 
 export function Details(props: Props) {
+  console.log(props);
+  // todo: extract id to give HP a custom styling
+  // todo: add the same styling to the node
+
   const entries = props.gedcom.indis[props.indi].tree;
   const entriesWithData = entries
     .map((entry) => dereference(entry, props.gedcom, (gedcom) => gedcom.other))

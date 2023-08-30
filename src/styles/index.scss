@@ -68,7 +68,7 @@ body {
   background: rgba($pp_manuscriptPaper, .85);
   flex: 0 0 21em;
   overflow: auto;
-  border-left: solid 1px rgba(0, 0, 0, .15);
+  border-left: solid 1px rgba(0, 0, 0, .33);
   padding: 2em 1.5em 1em 1.5em;
 }
 
@@ -359,8 +359,8 @@ div.zoom {
       }
 
       .border {
-        stroke: darkgoldenrod;
-        stroke-width: 2px;
+        //stroke: darkgoldenrod;
+        //stroke-width: 2px;
       }
     }
 
