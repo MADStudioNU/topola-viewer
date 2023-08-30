@@ -65,7 +65,9 @@ body {
 
 .sidePanel {
   font-size: 1em;
-  background: rgba($pp_manuscriptPaper, .85);
+  //background: rgba($pp_manuscriptPaper, .85);
+  //background: darken(#B1AEA0, 0%);
+  background: darken(#ece9e2, 5%);
   flex: 0 0 21em;
   overflow: auto;
   border-left: solid 1px rgba(0, 0, 0, .33);
@@ -319,7 +321,8 @@ div.zoom {
     overflow: hidden;
 
     .background {
-      fill: #B1AEA0;
+      //fill: #B1AEA0;
+      fill: darken(#ece9e2, 5%);
       transition: fill .2s;
     }
 
@@ -354,19 +357,20 @@ div.zoom {
         //fill: darkgoldenrod;
       //}
 
-      .name {
+      //.name {
+      //
+      //}
 
-      }
-
-      .border {
+      //.border {
         //stroke: darkgoldenrod;
         //stroke-width: 2px;
-      }
+      //}
     }
 
     &:hover {
       .background {
-        fill: darken(#B1AEA0, 10%);
+        //fill: darken(#B1AEA0, 6%);
+        fill: darken(#ece9e2, 12%);
       }
     }
   }
