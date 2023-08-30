@@ -543,7 +543,7 @@ index 0000000..8b3b4ed
 +</project>
 \ No newline at end of file
 diff --git a/node_modules/topola/dist/detailed-renderer.js b/node_modules/topola/dist/detailed-renderer.js
-index 242d518..30373b8 100644
+index 242d518..785dfda 100644
 --- a/node_modules/topola/dist/detailed-renderer.js
 +++ b/node_modules/topola/dist/detailed-renderer.js
 @@ -31,7 +31,7 @@ var IMAGE_WIDTH = 70;
@@ -602,7 +602,7 @@ index 242d518..30373b8 100644
      };
      DetailedRenderer.prototype.transition = function (selection) {
          return this.options.animate
-@@ -264,22 +272,31 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -264,22 +272,27 @@ var DetailedRenderer = /** @class */ (function (_super) {
          this.transition(background)
              .attr('width', function (node) { return node.indi.width; })
              .attr('height', function (node) { return node.indi.height; });
@@ -624,10 +624,6 @@ index 242d518..30373b8 100644
 +            .attr('width', function (node) { return IMAGE_WIDTH; })
 +            .attr('height', function (node) { return IMAGE_WIDTH; });
          var getIndi = function (data) {
-+
-+            // todo: stopped here!!!
-+            console.log(data.indi.id, _this.options.data.getIndi(data.indi.id));
-+
              return _this.options.data.getIndi(data.indi.id);
          };
          var getDetailsWidth = function (data) {
@@ -637,7 +633,7 @@ index 242d518..30373b8 100644
          // Name.
          enter
              .append('text')
-@@ -346,7 +363,9 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -346,7 +359,9 @@ var DetailedRenderer = /** @class */ (function (_super) {
              .attr('width', IMAGE_WIDTH)
              .attr('height', function (data) { return data.indi.height; })
              .attr('preserveAspectRatio', 'xMidYMin')

@@ -970,14 +970,14 @@
 3 TIME 16:19:35
 2 _WT_USER admin
 0 @X5@ OBJE
-1 FILE ./data/james-ley.jpg
+1 FILE http://localhost:3000/data/james-ley.jpg
 2 FORM JPG
 1 CHAN
 2 DATE 29 AUG 2023
 3 TIME 16:32:10
 2 _WT_USER admin
 0 @X6@ OBJE
-1 FILE ./data/arabella-hunt.jpg
+1 FILE http://localhost:3000/data/arabella-hunt.jpg
 2 FORM JPG
 1 CHAN
 2 DATE 29 AUG 2023

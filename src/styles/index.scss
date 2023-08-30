@@ -69,7 +69,7 @@ body {
   flex: 0 0 21em;
   overflow: auto;
   border-left: solid 1px rgba(0, 0, 0, .15);
-  padding: 2.5em 1.5em;
+  padding: 2em 1.5em 1em 1.5em;
 }
 
 .hidden {
@@ -104,7 +104,7 @@ div.ui.card.intro {
   height: 100%;
   //background-image: url(../topola.jpg);
   background-size: cover;
-  background-position: 0% 20%;
+  background-position: 0 20%;
   position: fixed;
   z-index: -100;
   filter: blur(8px) opacity(30%);
@@ -186,19 +186,18 @@ div.zoom {
 }
 
 .details {
-  //padding: 15px 0px;
-  //border-bottom: 1px solid rgba(34,36,38,.15);
-}
-
-.details {
   .details__name {
     display: block;
-    margin-bottom: 2em;
+    margin-bottom: 1.25em;
 
     .header {
       color: darken($pp_manuscriptInk, 20%);
       font-family: 'sssi', Garamond, serif;
     }
+  }
+
+  .details__image {
+    margin-bottom: 1.5em;
   }
 
   .details__notes {
@@ -325,7 +324,7 @@ div.zoom {
     }
 
     .border {
-      stroke: rgba(#000, .33);
+      stroke: rgba($pp_manuscriptInk, .66);
       stroke-width: 1;
       rx: 4;
     }
@@ -341,26 +340,27 @@ div.zoom {
     }
 
     //image {
-    //  transform: none;
-    //  position: absolute;
-    //  bottom: 0;
-    //  right: 0;
-    //  display: block;
+      //outline: 1px solid #000;
+      //transform: none;
+      //position: absolute;
+      //bottom: 0;
+      //right: 0;
+      //display: block;
     //}
 
     /* Individual nodes */
     &[data-gedcom-id=I1] {
-      .background {
+      //.background {
         //fill: darkgoldenrod;
-      }
+      //}
 
       .name {
-        //fill: #000;
+
       }
 
       .border {
         stroke: darkgoldenrod;
-        stroke-width: 1px;
+        stroke-width: 2px;
       }
     }
 
@@ -374,6 +374,8 @@ div.zoom {
   .family {
     .nocolor {
       fill: #B1AEA0;
+      stroke: rgba($pp_manuscriptInk, .66);
+      stroke-width: 1px;
     }
 
     .details {
