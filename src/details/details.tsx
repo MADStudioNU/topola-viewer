@@ -79,7 +79,6 @@ function noteDetails(entry: GedcomEntry) {
 }
 
 function nameDetails(entry: GedcomEntry) {
-  console.log(entry);
   const fullName = entry.data.replaceAll('/', '');
 
   const nameType = entry.tree.find(
@@ -150,17 +149,15 @@ interface Props {
 }
 
 export function Details(props: Props) {
-  console.log(props);
-  // todo: extract id to give HP a custom styling
-  // todo: add the same styling to the node
-
+  const individualClass =
+    props.indi === 'I1' ? 'details primary-individual' : '';
   const entries = props.gedcom.indis[props.indi].tree;
   const entriesWithData = entries
     .map((entry) => dereference(entry, props.gedcom, (gedcom) => gedcom.other))
     .filter(hasData);
 
   return (
-    <div className="details">
+    <div className={individualClass || 'details'}>
       <Item.Group>
         <div className="details__name">
           {getDetails(entries, ['NAME'], nameDetails)}

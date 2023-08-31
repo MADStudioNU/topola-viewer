@@ -188,13 +188,20 @@ div.zoom {
 }
 
 .details {
-  .details__name {
-    display: block;
-    margin-bottom: 1.25em;
+  .ui.items {
+    .details__name {
+      display: block;
+      margin-bottom: 1.25em;
 
-    .header {
-      color: darken($pp_manuscriptInk, 20%);
-      font-family: 'sssi', Garamond, serif;
+      .header {
+        color: darken($pp_manuscriptInk, 20%);
+        font-family: 'sssi', Garamond, serif;
+      }
+
+      .item {
+        display: inline-block;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -212,6 +219,28 @@ div.zoom {
       line-height: 1.5;
       //font-style: normal;
       color: darken($pp_manuscriptInk, 20%);
+    }
+  }
+
+  // Primary person customizations
+  &.primary-individual {
+    .details__name {
+      .item {
+        vertical-align: middle;
+      }
+
+      &::before {
+        $size: 1.5em;
+
+        content: '';
+        height: $size;
+        width: $size;
+        margin-right: .66em;
+        background: url(/images/pp-formal.jpg) center no-repeat;
+        background-size: $size;
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
   }
 }
@@ -377,7 +406,7 @@ div.zoom {
 
   .family {
     .nocolor {
-      fill: #B1AEA0;
+      fill: darken(#ece9e2, 12%);
       stroke: rgba($pp_manuscriptInk, .66);
       stroke-width: 1px;
     }
