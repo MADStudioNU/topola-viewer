@@ -64,12 +64,14 @@ export function WrappedImage(props: Props) {
       )}
       <Modal
         basic
+        closeOnDocumentClick
+        closeOnDimmerClick
         size="large"
-        closeIcon={<Icon name="close" color="red" />}
+        closeIcon={<Icon name="close" />}
         open={imageOpen}
         onClose={() => setImageOpen(false)}
         onOpen={() => setImageOpen(true)}
-        centered={false}
+        centered={true}
       >
         <Modal.Header>{props.title}</Modal.Header>
         <Modal.Content image>
