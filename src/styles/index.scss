@@ -1,5 +1,6 @@
 $pp_manuscriptInk: #4d3a32;
 $pp_manuscriptPaper: #D2CFBF;
+$pp_shinyGold: #e4bc29;
 $stem: '/fonts/';
 
 // SSSi Regular
@@ -416,4 +417,16 @@ div.zoom {
       fill: darken($pp_manuscriptInk, 5%);
     }
   }
+}
+
+::selection {
+  background: rgba($pp_shinyGold, .9) !important;
+  text-shadow: none !important;
+  color: #181818 !important;
+}
+
+::-moz-selection {
+  background: rgba($pp_shinyGold, .9) !important;
+  text-shadow: none !important;
+  color: #181818 !important;
 }
