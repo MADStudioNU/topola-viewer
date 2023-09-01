@@ -79,7 +79,7 @@ export function WrappedImage(props: Props) {
             className="modal-image"
             src={props.url}
             alt={props.title || props.filename}
-            label={<Label attached="bottom" content={props.filename} />}
+            // label={<Label attached="bottom" content={props.filename} />}
             wrapped
           />
         </Modal.Content>
