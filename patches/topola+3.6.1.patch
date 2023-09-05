@@ -543,7 +543,7 @@ index 0000000..8b3b4ed
 +</project>
 \ No newline at end of file
 diff --git a/node_modules/topola/dist/detailed-renderer.js b/node_modules/topola/dist/detailed-renderer.js
-index 242d518..501adef 100644
+index 242d518..f1c3542 100644
 --- a/node_modules/topola/dist/detailed-renderer.js
 +++ b/node_modules/topola/dist/detailed-renderer.js
 @@ -31,7 +31,7 @@ var IMAGE_WIDTH = 70;
@@ -555,22 +555,24 @@ index 242d518..501adef 100644
  var textLengthCache = new Map();
  /** Calculates the length of the given text in pixels when rendered. */
  function getLength(text, textClass) {
-@@ -98,11 +98,12 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -97,12 +97,14 @@ var DetailedRenderer = /** @class */ (function (_super) {
+         if (deathPlace) {
              detailsList.push({ symbol: '', text: deathPlace });
          }
++        var latinCrossChar = '\u271D\uFE0E';
          if (deathDate || deathPlace) {
 -            detailsList[listIndex].symbol = '+';
-+            detailsList[listIndex].symbol = '✝';
++            detailsList[listIndex].symbol = latinCrossChar;
          }
          else if (indi.isConfirmedDeath()) {
 -            detailsList.push({ symbol: '+', text: '' });
-+            detailsList.push({ symbol: '✝', text: '' });
++            detailsList.push({ symbol: latinCrossChar, text: '' });
          }
 +
          return detailsList;
      };
      /** Extracts lines of details for a family. */
-@@ -184,12 +185,19 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -184,12 +186,19 @@ var DetailedRenderer = /** @class */ (function (_super) {
                  });
              }
              return result;
@@ -593,7 +595,7 @@ index 242d518..501adef 100644
          this.renderIndi(indiEnter, indiUpdate);
          var familyEnter = enter
              .select(function (node) {
-@@ -208,7 +216,7 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -208,7 +217,7 @@ var DetailedRenderer = /** @class */ (function (_super) {
          this.renderFamily(familyEnter, familyUpdate);
      };
      DetailedRenderer.prototype.getCss = function () {
@@ -602,15 +604,7 @@ index 242d518..501adef 100644
      };
      DetailedRenderer.prototype.transition = function (selection) {
          return this.options.animate
-@@ -258,28 +266,33 @@ var DetailedRenderer = /** @class */ (function (_super) {
-             .attr('rx', 5)
-             .attr('stroke-width', 0)
-             .attr('class', function (node) {
--            return "background " + _this.getColoringClass() + " " + _this.getSexClass(node.indi.id);
--        })
-+                return "background " + _this.getColoringClass() + " " + _this.getSexClass(node.indi.id);
-+            })
-             .merge(update.select('rect.background'));
+@@ -264,22 +273,27 @@ var DetailedRenderer = /** @class */ (function (_super) {
          this.transition(background)
              .attr('width', function (node) { return node.indi.width; })
              .attr('height', function (node) { return node.indi.height; });
@@ -641,51 +635,7 @@ index 242d518..501adef 100644
          // Name.
          enter
              .append('text')
-@@ -320,25 +333,25 @@ var DetailedRenderer = /** @class */ (function (_super) {
-             _loop_1(i);
-         }
-         // Render id.
--        var id = enter
--            .append('text')
--            .attr('class', 'id')
--            .text(function (data) { return (getIndi(data).showId() ? data.indi.id : ''); })
--            .merge(update.select('text.id'));
--        this.transition(id).attr('transform', function (data) { return "translate(9, " + (data.indi.height - 5) + ")"; });
-+        // var id = enter
-+        //     .append('text')
-+        //     .attr('class', 'id')
-+        //     .text(function (data) { return (getIndi(data).showId() ? data.indi.id : ''); })
-+        //     .merge(update.select('text.id'));
-+        // this.transition(id).attr('transform', function (data) { return "translate(9, " + (data.indi.height - 5) + ")"; });
-         // Render sex.
--        var sex = enter
--            .append('text')
--            .attr('class', 'details sex')
--            .attr('text-anchor', 'end')
--            .text(function (data) {
--            var sexSymbol = SEX_SYMBOLS.get(getIndi(data).getSex() || '') || '';
--            return getIndi(data).showSex() ? sexSymbol : '';
--        })
--            .merge(update.select('text.sex'));
--        this.transition(sex).attr('transform', function (data) {
--            return "translate(" + (getDetailsWidth(data) - 5) + ", " + (data.indi.height - 5) + ")";
--        });
-+        // var sex = enter
-+        //     .append('text')
-+        //     .attr('class', 'details sex')
-+        //     .attr('text-anchor', 'end')
-+        //     .text(function (data) {
-+        //     var sexSymbol = SEX_SYMBOLS.get(getIndi(data).getSex() || '') || '';
-+        //     return getIndi(data).showSex() ? sexSymbol : '';
-+        // })
-+        //     .merge(update.select('text.sex'));
-+        // this.transition(sex).attr('transform', function (data) {
-+        //     return "translate(" + (getDetailsWidth(data) - 5) + ", " + (data.indi.height - 5) + ")";
-+        // });
-         // Image.
-         enter
-             .filter(function (data) { return !!getIndi(data).getImageUrl(); })
-@@ -346,7 +359,9 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -346,7 +360,9 @@ var DetailedRenderer = /** @class */ (function (_super) {
              .attr('width', IMAGE_WIDTH)
              .attr('height', function (data) { return data.indi.height; })
              .attr('preserveAspectRatio', 'xMidYMin')
