@@ -49,6 +49,10 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 40em) {
+    display: block;
+  }
 }
 
 #content {
@@ -57,22 +61,36 @@ body {
   overflow: hidden;
   height: 100%;
   background: none;
+
+  @media (max-width: 40em) {
+    display: block;
+    flex: none;
+  }
 }
 
 #svgContainer {
   flex: 1 1 auto;
   overflow: auto;
+
+  @media (max-width: 40em) {
+    flex: none;
+    display: block;
+    height: 50%;
+  }
 }
 
 .sidePanel {
   font-size: 1em;
-  //background: rgba($pp_manuscriptPaper, .85);
-  //background: darken(#B1AEA0, 0%);
   background: darken(#ece9e2, 5%);
   flex: 0 0 21em;
   overflow: auto;
   border-left: solid 1px rgba(0, 0, 0, .33);
   padding: 2em 1.5em 1em 1.5em;
+
+  @media (max-width: 40em) {
+    display: block;
+    height: 50%;
+  }
 }
 
 .hidden {
