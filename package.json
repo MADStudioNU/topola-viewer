@@ -69,7 +69,7 @@
   },
   "scripts": {
     "start": "run-script-os",
-    "start:default": "FAST_REFRESH=false REACT_APP_CHANGELOG=`cat CHANGELOG.md` REACT_APP_GIT_SHA=`git rev-parse --short HEAD` REACT_APP_GIT_TIME=`git log -1 --format=%ci` react-scripts start",
+    "start:default": "FAST_REFRESH=false BROWSER=none REACT_APP_CHANGELOG=`cat CHANGELOG.md` REACT_APP_GIT_SHA=`git rev-parse --short HEAD` REACT_APP_GIT_TIME=`git log -1 --format=%ci` react-scripts start",
     "start:windows": "react-scripts start",
     "build": "run-script-os",
     "build:default": "REACT_APP_CHANGELOG=`cat CHANGELOG.md` REACT_APP_GIT_SHA=`git rev-parse --short HEAD` REACT_APP_GIT_TIME=`git log -1 --format=%ci` react-scripts build",

@@ -389,6 +389,17 @@ div.zoom {
     .details {
       fill: darken($pp_manuscriptInk, 5%);
       font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+      // Birth char
+      &.birth {
+        //fill: #222;
+        font-size: 8px;
+      }
+
+      // Death char
+      //&.death {
+      //  fill: ;
+      //}
     }
 
     //image {
