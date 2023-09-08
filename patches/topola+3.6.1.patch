@@ -543,7 +543,7 @@ index 0000000..8b3b4ed
 +</project>
 \ No newline at end of file
 diff --git a/node_modules/topola/dist/detailed-renderer.js b/node_modules/topola/dist/detailed-renderer.js
-index 242d518..f1c3542 100644
+index 242d518..b683c72 100644
 --- a/node_modules/topola/dist/detailed-renderer.js
 +++ b/node_modules/topola/dist/detailed-renderer.js
 @@ -31,7 +31,7 @@ var IMAGE_WIDTH = 70;
@@ -555,7 +555,17 @@ index 242d518..f1c3542 100644
  var textLengthCache = new Map();
  /** Calculates the length of the given text in pixels when rendered. */
  function getLength(text, textClass) {
-@@ -97,12 +97,14 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -88,7 +88,8 @@ var DetailedRenderer = /** @class */ (function (_super) {
+             detailsList.push({ symbol: '', text: birthPlace });
+         }
+         if (birthDate || birthPlace) {
+-            detailsList[0].symbol = '*';
++            var heavyAsteriskChar = '\u2731\uFE0E';
++            detailsList[0].symbol = heavyAsteriskChar;
+         }
+         var listIndex = detailsList.length;
+         if (deathDate) {
+@@ -97,12 +98,14 @@ var DetailedRenderer = /** @class */ (function (_super) {
          if (deathPlace) {
              detailsList.push({ symbol: '', text: deathPlace });
          }
@@ -572,7 +582,7 @@ index 242d518..f1c3542 100644
          return detailsList;
      };
      /** Extracts lines of details for a family. */
-@@ -184,12 +186,19 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -184,12 +187,19 @@ var DetailedRenderer = /** @class */ (function (_super) {
                  });
              }
              return result;
@@ -595,7 +605,7 @@ index 242d518..f1c3542 100644
          this.renderIndi(indiEnter, indiUpdate);
          var familyEnter = enter
              .select(function (node) {
-@@ -208,7 +217,7 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -208,7 +218,7 @@ var DetailedRenderer = /** @class */ (function (_super) {
          this.renderFamily(familyEnter, familyUpdate);
      };
      DetailedRenderer.prototype.getCss = function () {
@@ -604,7 +614,7 @@ index 242d518..f1c3542 100644
      };
      DetailedRenderer.prototype.transition = function (selection) {
          return this.options.animate
-@@ -264,22 +273,27 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -264,22 +274,27 @@ var DetailedRenderer = /** @class */ (function (_super) {
          this.transition(background)
              .attr('width', function (node) { return node.indi.width; })
              .attr('height', function (node) { return node.indi.height; });
@@ -635,7 +645,7 @@ index 242d518..f1c3542 100644
          // Name.
          enter
              .append('text')
-@@ -346,7 +360,9 @@ var DetailedRenderer = /** @class */ (function (_super) {
+@@ -346,7 +361,9 @@ var DetailedRenderer = /** @class */ (function (_super) {
              .attr('width', IMAGE_WIDTH)
              .attr('height', function (data) { return data.indi.height; })
              .attr('preserveAspectRatio', 'xMidYMin')
