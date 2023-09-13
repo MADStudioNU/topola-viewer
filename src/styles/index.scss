@@ -228,16 +228,76 @@ div.zoom {
     margin-bottom: 1.5em;
   }
 
-  .details__notes {
-    margin-top: 1em;
-    border-top: 1px solid rgba($pp_manuscriptInk, .15);
-    padding-top: 1.5em;
+  .ui.items {
+    .details__notes {
+      margin-top: 1em;
+      border-top: 1px solid rgba($pp_manuscriptInk, .15);
+      padding-top: 1.5em;
+      line-height: 1.66;
 
-    i {
-      font-size: .95em;
-      line-height: 1.5;
-      //font-style: normal;
-      color: darken($pp_manuscriptInk, 20%);
+      .item {
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .note-paragraph {
+          &:not(:last-child) {
+            margin-bottom: 1.25em;
+          }
+
+          > p {
+            line-height: 1.5;
+          }
+
+          // Sources
+          blockquote {
+            color: #282828;
+            font-size: .9em;
+            display: block;
+            white-space: normal;
+            font-style: italic;
+            margin: 0;
+            padding: .5em .66em;
+            border-left: 3px solid rgba($pp_manuscriptInk, .2);
+            background: rgba($pp_manuscriptInk, .1);
+          }
+
+          // Links in notes
+          a {
+            background: deeppink;
+          }
+
+          // Poem refs
+          // todo: apply TPP styles
+          a[title*="Link to the Pulter Project Poem"] {
+            background: #e4bc29;
+
+            // Formal 'P'
+            &::before {
+              content: 'P';
+              background: #0ea432;
+            }
+
+            // Specific poem refs
+            &[title*="Link to the Pulter Project Poem 86"] {
+              &::after {
+                content: '86';
+                font-size: .75em;
+                font-family: 'sssi', Garamond, serif;
+                color: #282828;
+                font-style: normal;
+                margin-left: .25em;
+              }
+            }
+          }
+        }
+      }
+
+
+      i {
+        //font-style: normal;
+        color: darken($pp_manuscriptInk, 20%);
+      }
     }
   }
 

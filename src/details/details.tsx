@@ -72,7 +72,7 @@ function noteDetails(entry: GedcomEntry) {
   return (
     <MultilineText
       lines={getData(entry).map((line, index) => (
-        <i key={index}>{line}</i>
+        <div key={index}>{line}</div>
       ))}
     />
   );
