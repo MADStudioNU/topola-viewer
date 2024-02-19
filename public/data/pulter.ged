@@ -1,10 +1,10 @@
 0 HEAD
 1 SOUR webtrees
 2 NAME webtrees
-2 VERS 2.1.17
+2 VERS 2.1.18
 1 DEST DISKETTE
-1 DATE 31 AUG 2023
-2 TIME 19:14:05
+1 DATE 19 FEB 2024
+2 TIME 22:02:08
 1 GEDC
 2 VERS 5.5.1
 2 FORM LINEAGE-LINKED
@@ -23,9 +23,10 @@
 2 DATE 1605
 1 DEAT
 2 DATE 1678
-1 NOTE The lady Hester Pulter was the eighth child of James Ley and his wife Mary Petty. She was the author of 120 poems and an unfinished romance called “The Unfortunate Florinda.” In 1620 She began married life with her husband Arthur Pult
-2 CONC er at fifteen. Throughout her marriage she gave birth to 15 (debatably 16) children. Her numerous poems span a diverse array of subjects including the English Civil War, contemplative musings on politics, religion, science, and family life. For m
-2 CONC ost of her life Pulter lived at the Broadfield estate with her husband and children. An image of the estate from Henry Chauncy’s "The Historical Antiquities of Hertfordshire (1700)" is used to represent Hester Pulter. Unfortunately, a portrait of Pulter does not exist.
+1 NOTE Hester Pulter, now discovered to be a significant poet in 17th-century England, was the eighth child of James Ley and his wife Mary Petty. In 1620, when she was 15 years old, Pulter married Arthur Pulter who inherited Broadfield Estate in Hertfor
+2 CONC dshire, UK. During her marriage she gave birth to 15 (debatably 16) children. She was the author of 120 poems and an unfinished romance called “The Unfortunate Florinda.” Her numerous poems span a diverse array of subjects including the English C
+2 CONC ivil War as well as contemplative musings on politics, religion, science, and family life. An image of the estate from Henry Chauncy’s “The Historical Antiquities of Hertfordshire (1700)” is used to represent Hester Pulter. Unfortunately, a portr
+2 CONC ait of Hester Pulter does not exist.
 2 CONT > Leah Knight and Wendy Wall, gen. eds., The Pulter Project: Poet in the Making (2018).
 2 CONT
 2 CONT > Image Credit: Broadfield, in Henry Chauncy, The Historical Antiquities of Hertfordshire (1700), plate between pp. 72-3. Folger Shakespeare Library, CC BY-SA 4.0.
@@ -34,10 +35,14 @@
 1 FAMS @F1@
 1 FAMC @F2@
 1 CHAN
-2 DATE 31 AUG 2023
-3 TIME 19:08:49
-2 _WT_USER admin
+2 DATE 29 JAN 2024
+3 TIME 22:38:41
+2 _WT_USER pulterprojectteam
 1 OBJE @X8@
+1 SOUR @X11@
+2 PAGE [Citation details]
+2 DATA
+3 TEXT [Citation text...]
 0 @I2@ INDI
 1 NAME Arthur /Pulter/
 2 GIVN Arthur
@@ -48,7 +53,7 @@
 2 DATE 1603
 1 DEAT
 2 DATE 1689
-1 NOTE Arthur Pulter the son of Lytton Pulter and Penelope Capel. Arthur married Hester in 1620 when he was seventeen. After taking on many roles in civic life including justice of the peace, captain, sheriff After the English Civil War began
+1 NOTE Bio notes: Arthur Pulter the son of Lytton Pulter and Penelope Capel. Arthur married Hester in 1620 when he was seventeen. After taking on many roles in civic life including justice of the peace, captain, sheriff After the English Civil War began
 2 CONC  he removed himself from public life.
 2 CONT (Leah Knight and Wendy Wall, gen. eds., The Pulter Project: Poet in the Making (2018), http://pulterproject.northwestern.edu.)
 2 CONT
@@ -80,13 +85,17 @@
 2 DATE 1625
 1 DEAT
 2 DATE 1645
-1 NOTE b. 1625 d.1645
+1 NOTE Bio notes: b. 1625 d.1645
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 2 CONT
 2 CONT Jane Pulter is the subject of three poems: "Upon the death of my dear and lovely daughter Jane Pulter", "Tell me no more (on the same)", "To My Dear Jane, Margaret, and Penelope Pulter, They Being at London, I at Broadfield"
 1 FAMC @F1@
+1 CHAN
+2 DATE 29 JAN 2024
+3 TIME 22:25:49
+2 _WT_USER pulterprojectteam
 0 @I4@ INDI
 1 NAME James /Pulter/
 2 GIVN James
@@ -96,7 +105,7 @@
 2 DATE 1627
 1 DEAT
 2 DATE 1659
-1 NOTE b. 1627 d. 1659
+1 NOTE Bio notes: b. 1627 d. 1659
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 1 FAMC @F1@
@@ -109,7 +118,7 @@
 2 DATE 1629
 1 DEAT
 2 DATE 1686
-1 NOTE Margaret Pulter married John Forester a London merchant.
+1 NOTE Bio notes: Margaret Pulter married John Forester a London merchant.
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 42).
 2 CONT
@@ -133,7 +142,7 @@
 2 DATE 1630
 1 DEAT
 2 DATE 1632
-1 NOTE b. 1630 d.1632
+1 NOTE Bio notes: b. 1630 d.1632
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 1 FAMC @F1@
@@ -146,7 +155,7 @@
 2 DATE 1633
 1 DEAT
 2 DATE 1655
-1 NOTE b.1633 d.1655
+1 NOTE Bio notes: b.1633 d.1655
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 2 CONT
@@ -162,7 +171,7 @@
 2 DATE 1634
 1 DEAT
 2 DATE 1639
-1 NOTE b.1634 d.1639
+1 NOTE Bio notes: b.1634 d.1639
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 1 FAMC @F1@
@@ -175,7 +184,7 @@
 2 DATE 1635
 1 DEAT
 2 DATE 1636
-1 NOTE B.1635 d.1636
+1 NOTE Bio notes: B.1635 d.1636
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 2 CONT
@@ -193,7 +202,7 @@
 2 DATE 1636
 1 DEAT
 2 DATE 1680
-1 NOTE b.1636 d.1680
+1 NOTE Bio notes: b.1636 d.1680
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
@@ -208,7 +217,7 @@
 2 DATE 1638
 1 DEAT
 2 DATE 1665
-1 NOTE b.1638 d.1665
+1 NOTE Bio notes: b.1638 d.1665
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 1 FAMC @F1@
@@ -221,7 +230,7 @@
 2 DATE 1641
 1 DEAT
 2 DATE 1642
-1 NOTE b.1641 d.1642
+1 NOTE Bio notes: b.1641 d.1642
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 1 FAMC @F1@
@@ -234,7 +243,7 @@
 2 DATE 1624
 1 DEAT
 2 DATE 1631
-1 NOTE According to the scholarship of Alice Eardley the Pulter's may have had two children named Mary. One appears to be born in an unknown year before Jane, and then to have died in 1631.
+1 NOTE Bio notes: According to the scholarship of Alice Eardley the Pulter's may have had two children named Mary. One appears to be born in an unknown year before Jane, and then to have died in 1631.
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
@@ -246,7 +255,7 @@
 1 SEX F
 1 DEAT
 2 DATE 1674
-1 NOTE The birth date for this Mary is also unknown. Evidence for her existence comes from her marriage to William Capel in 1668 and her death noted in 1674.
+1 NOTE Bio notes: The birth date for this Mary is also unknown. Evidence for her existence comes from her marriage to William Capel in 1668 and her death noted in 1674.
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
@@ -258,7 +267,7 @@
 1 SEX M
 1 DEAT
 2 DATE 1640
-1 NOTE d. 1640
+1 NOTE Bio notes: d. 1640
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
@@ -272,7 +281,7 @@
 2 DATE 1648
 1 DEAT
 2 DATE 1677
-1 NOTE b.1648 d.1677
+1 NOTE Bio notes: b.1648 d.1677
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 2 CONT
@@ -290,13 +299,15 @@
 1 BIRT
 2 DATE 1627
 1 DEAT Y
-1 NOTE b. 1627
+1 NOTE Bio notes: b. 1627
 2 CONT It is possible that Jacob Pulter did not exist. According to Alice Eardley's research it appears that James and Jacob are the same child.
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’”Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 42).
 1 FAMC @F1@
 0 @I18@ INDI
+1 FAMC @F7@
+1 FAMS @F2@
 1 NAME James /Ley/
 2 GIVN James
 2 SURN Ley
@@ -306,30 +317,28 @@
 2 DATE 1550
 1 DEAT
 2 DATE 1629
-1 NOTE b.1550 d.1629
-2 CONT James Ley, the first earl of Marlborough, was a prominent politician and judge throughout his lifetime. According to Wilfrid Prest (Prest, Wilfrid. "Ley, James, first earl of Marlborough (1550–1629), judge and politician." Oxford Dictionary of Na
-2 CONC tional Biography. 23 Sep. 2004; Accessed 24 Jul. 2023. https://www-oxforddnb-com.turing.library.northwestern.edu/view/10.1093/ref:odnb/9780198614128.001.0001/odnb-9780198614128-e-16619) In 1590 he married Mary Petty (Pettie) They had ten together
-2 CONC , a number which is put into question by Alice Eardley, who states in her work that all eleven of the Ley children were from his relationship with Petty.
-2 CONT (Alice Eardley, Demmy Verbeke, “Remembering Mary Ley (♱1613),” 179) & (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest Dissertations Publishing, 2008, 30).
+1 NOTE Bio notes: b.1550 d.1629
+2 CONT James Ley, the first earl of Marlborough, was a prominent politician and judge throughout his lifetime. In 1590 he married Mary Petty (also spelled Pettie) They had ten children together (though Alice Eardley records eleven Ley children).
 2 CONT
 2 CONT James Ley served in parliament and as a justice of peace for the borough of Westbury. In 1603 he became a Welsh Judge in court of the Carmarthen circuit, and later the chief justice of king's bench in Ireland. After the death of Mary Petty, and t
-2 CONC he subsequent death in 1618 of Ley's second wife, Mary Bowyer, Ley married Jane Boteler (d. 1672). She was the seventeen year old niece of another prominent political figure. From his contemporaries including John Milton, Ley received both praise
+2 CONC he subsequent death in 1618 of Ley's second wife, Mary Bowyer, Ley married Jane Boteler (d. 1672). She was the seventeen-year-old niece of another prominent political figure. From his contemporaries including John Milton, Ley received both praise
 2 CONC  and ridicule. On his grave it is written "'he was a wise, discreet, sober man, of great patience, and profound ingenuity, and had good skill in antiquities and heraldry. And he loved old silver and gold coin of the Romans and others.'" He is bur
 2 CONC ied at Westbury.
-2 CONT (Prest, Wilfrid. "Ley, James, first earl of Marlborough (1550–1629), judge and politician." Oxford Dictionary of National Biography. 23 Sep. 2004; Accessed 24 Jul. 2023. https://www-oxforddnb-com.turing.library.northwestern.edu/view/10.1093/ref:o
-2 CONC dnb/9780198614128.001.0001/odnb-9780198614128-e-16619)
+2 CONT
+2 CONT See Prest, Wilfrid. "Ley, James, first earl of Marlborough (1550–1629), judge and politician." Oxford Dictionary of National Biography. 23 Sep. 2004.
 2 CONT
 2 CONT Pulter's Poem The Oyster and the Mouse (Emblem 48) is based a story her father told her.
 2 CONT
+2 CONT  See Wilfrid Prest  "Ley, James, first earl of Marlborough (1550–1629), judge and politician." Oxford Dictionary of National Biography. 23 Sep. 2004.
+2 CONT
+2 CONT Alice Eardley, Demmy Verbeke, “Remembering Mary Ley (♱1613),” 179) & (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest Dissertations Publishing, 2008, 30).
+2 CONT
 2 CONT Image Credit
 2 CONT (Artist Unknowen, James Ley, 1st Earl of Marlborough, circa 1624, (National Portrait Gallery, London), https://www.npg.org.uk/collections/search/use-this-image/?mkey=mw04219)
-1 FAMS @F2@
-1 FAMS @F6@
-1 FAMC @F7@
 1 CHAN
-2 DATE 30 AUG 2023
-3 TIME 20:21:19
-2 _WT_USER admin
+2 DATE 08 FEB 2024
+3 TIME 04:31:17
+2 _WT_USER pulterprojectteam
 1 OBJE @X9@
 0 @I19@ INDI
 1 NAME Mary /Petty (Pettie)/
@@ -339,17 +348,22 @@
 1 SEX F
 1 DEAT
 2 DATE 1613
-1 NOTE Mary Petty (Pettie) was the daughter of an important family in Oxfordshire. Her uncle was George Pettie who wrote romances such as "A Petite Pallace of Pettie his Pleasure" (c. 1576). This text was popular in the 16th and 17th centurie
-2 CONC s. In addition she was the aunt of Anthony à Wood who became a notable antiquary at Oxford. (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
+1 NOTE Bio notes: Mary Pettie was the daughter of an important literary family in Oxfordshire. Her uncle, George Pettie,  was author of thhe 1576 "A Petite Pallace of Pettie his Pleasure" ( a collection of classically influenced tales popular in the 16t
+2 CONC h and 17th centuries) and translator of Stefano Guazzo's "Civile Conversation." Mary Pettie's nephew,  Anthony à Wood, was a notable antiquary at Oxford.
+2 CONT
+2 CONT Pettie was knowen in her social circles as a pious and virtuous woman, and upon her death poems  were written by P.Kynninmond in Latin to honor her.
+2 CONT
+2 CONT Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 30).
 2 CONT
-2 CONT She had all 11 Children with James Ley whom she married in 1590.
-2 CONT (Eardley, Verbeke, “Remembering Mary Ley (♱1613),” 179)
-2 CONT
-2 CONT She was knowen in her social circles as a pious and virtuous woman, and upon her death poems  were written by P.Kynninmond in Latin to honor her  (Eardley, Verbeke, “Remembering Mary Ley (♱1613),” 183).
+2 CONT Eardley, Verbeke, “Remembering Mary Ley (♱1613),” 179
 2 CONT
 2 CONT d.1613 (Eardley, Verbeke, “Remembering Mary Ley (♱1613),” 179)
 1 FAMS @F2@
+1 CHAN
+2 DATE 08 FEB 2024
+3 TIME 04:39:35
+2 _WT_USER pulterprojectteam
 0 @I20@ INDI
 1 NAME James /Ley/
 2 GIVN James
@@ -359,7 +373,7 @@
 2 DATE 1599
 1 DEAT
 2 DATE 1617
-1 NOTE b. 1599 d. 1617 or 1618
+1 NOTE Bio notes: b. 1599 d. 1617 or 1618
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 30)
 1 FAMC @F2@
@@ -372,7 +386,7 @@
 2 DATE 1595
 1 DEAT
 2 DATE 1638
-1 NOTE The second Earl of Marlborough.
+1 NOTE Bio notes: The second Earl of Marlborough.
 2 CONT
 2 CONT b. 1595 d.1638
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
@@ -388,7 +402,7 @@
 2 DATE 1612
 1 DEAT
 2 DATE 1680
-1 NOTE The fourth Earl of Marlborough. After the death of William in 1679/1680 the earldom became extinct.
+1 NOTE Bio notes: The fourth Earl of Marlborough. After the death of William in 1679/1680 the earldom became extinct.
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 30-31)
 2 CONT
@@ -423,7 +437,7 @@
 1 BIRT
 2 DATE 1590
 1 DEAT Y
-1 NOTE b. 1590 or 1591
+1 NOTE Bio notes: b. 1590 or 1591
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 30)
 1 FAMC @F2@
@@ -435,7 +449,7 @@
 1 BIRT
 2 DATE 1593
 1 DEAT Y
-1 NOTE b.1593
+1 NOTE Bio notes: b.1593
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 30)
 1 FAMC @F2@
@@ -447,7 +461,7 @@
 1 BIRT
 2 DATE 1594
 1 DEAT Y
-1 NOTE b. 1594
+1 NOTE Bio notes: b. 1594
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 30)
 1 FAMC @F2@
@@ -460,15 +474,25 @@
 2 DATE 1597
 1 DEAT
 2 DATE 1674
-1 NOTE b. 1597 d.1674
+1 NOTE Bio notes: b. 1597 d.1674
+2 CONT
+2 CONT Dyonisia Ley lived in London with her husband John Harrington, whose journals illustrate some of the intimate dynamics of the Ley family. In 1647 Hester visited her in London.  According to genealogist, Francis Poynton, “Indeed it is said (and th
+2 CONC e tradition may be true?) that he [Harington] had a rigid ruler in Dionysia his wife, one of the daughters of James Ley, first Earl of Marlborough.” which Alice Eardley cites as evidence to the idea that Dyonisia was a "formidable" woman.
+2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 30)
-2 CONT Dyonisia lived in London, and in 1647 Hester visited her there (Britland, Karen, “Conspiring with ‘Friends’: Hester Pulter’s Poetry and the Stanley Family at Cumberlow Green,” The Review of English Studies 69, 292 (November 2018): 832-854, https:
-2 CONC //doi.org/10.1093/res/hgy058, 2). She was married to John Harington whose journals illustrate the intimate dynamics of the Ley family (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
-2 CONT Dissertations Publishing, 2008, 65). According to genealogist, Francis Poynton, “Indeed it is said (and the tradition may be true?) that he [Harington] had a rigid ruler in Dionysia his wife, one of the daughters of James Ley, first Earl of Marlb
-2 CONC orough.” which Alice Eardley cites as evidence to the idea that Dyonisia was a "formidable" woman. (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest Dissertations Publishing, 2008, 65)
+2 CONT
+2 CONT See Britland, Karen, “Conspiring with ‘Friends’: Hester Pulter’s Poetry and the Stanley Family at Cumberlow Green,” The Review of English Studies 69, 292 (November 2018): 832-854, https://doi.org/10.1093/res/hgy058, 2)
+2 CONT
+2 CONT Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuestDissertations Publishing, 2008, 65)
+2 CONT
+2 CONT Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest Dissertations Publishing, 2008, 65)
 1 FAMS @F8@
 1 FAMC @F2@
+1 CHAN
+2 DATE 08 FEB 2024
+3 TIME 04:42:46
+2 _WT_USER pulterprojectteam
 0 @I27@ INDI
 1 NAME Margaret /Ley/
 2 GIVN Margaret
@@ -478,7 +502,7 @@
 2 DATE 1602
 1 DEAT
 2 DATE 1652
-1 NOTE b. 1602 d.1652
+1 NOTE Bio notes: b. 1602 d.1652
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 30)
 2 CONT
@@ -515,7 +539,7 @@
 2 DATE 1610
 1 DEAT
 2 DATE 1652
-1 NOTE b. 1610
+1 NOTE Bio notes: b. 1610
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 30)
 1 FAMC @F2@
@@ -527,7 +551,7 @@
 1 BIRT
 2 DATE 1611
 1 DEAT Y
-1 NOTE b.1611
+1 NOTE Bio notes: b.1611
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 30)
 1 FAMC @F2@
@@ -541,7 +565,7 @@
 2 DATE 1517
 1 DEAT
 2 DATE 1566
-1 NOTE b.1517
+1 NOTE Bio notes: b.1517
 2 CONT This date comes from an estimation based on the quotation from the declaration of Ley “The same Henrie Ley, shortlie after the xviijth or [?] xixth yere of K[ing] H[enry] the 8, and before the xxxjth yere died (139-40), beinge not above xxxtie ye
 2 CONC res old, and was buried at Plymouth, haveinge yssue one onlie childe, Henrie Ley, who was then an infant of tenn yeres…”
 2 CONT (Raymond Skinner, “The Declaration of Ley,” 102)
@@ -559,13 +583,13 @@
 1 SEX F
 1 DEAT
 2 DATE 1589
-1 NOTE d.1589 (Raymond Skinner, “The Declaration of Ley,” 104)
+1 NOTE Bio notes: d.1589 (Raymond Skinner, “The Declaration of Ley,” 104)
 2 CONT
 2 CONT (Raymond Skinner, “The Declaration of Ley,” 103)
 1 FAMS @F7@
 0 @I32@ INDI
-1 NAME Henrie /Ley/
-2 GIVN Henrie
+1 NAME Henry /Ley/
+2 GIVN Henry
 2 SURN Ley
 2 _MARNM Ley
 1 SEX M
@@ -573,11 +597,15 @@
 2 DATE 1497
 1 DEAT
 2 DATE 1527
-1 NOTE b.1497 d.1527
-2 CONT These dates are an estimation according to the quote in the declaration of Ley which states Henry Ley died “shortlie after the xviijth or [?] xixth yere of K[ing] H[enry] the 8, and before the xxxjth yere died (139-40), beinge not above xxxtie ye
-2 CONC res old…”
-2 CONT (Raymond Skinner, “The Declaration of Ley,” 102)
+1 NOTE Bio notes: b.1497 d.1527
+2 CONT These dates are an estimation according to the quote in the Declaration of Ley (a manuscript compiled from James Ley's records of his family history ) which states that Henry Ley died “shortlie after the xviijth or [?] xixth yere of K[ing] H[enry
+2 CONC ] the 8, and before the xxxjth yere died (139-40), beinge not above xxxtie yeres old…” (Skinner, “Declaration," 102)
 1 FAMS @F9@
+1 CHAN
+2 DATE 11 SEP 2023
+3 TIME 18:38:27
+2 _WT_USER pulterprojectteam
+1 NOTE Raymond Skinner, “The Declaration of Ley,” 102.
 0 @I33@ INDI
 1 NAME Elizabeth /Cotton/
 2 GIVN Elizabeth
@@ -585,7 +613,7 @@
 2 _MARNM Cotton
 1 SEX F
 1 DEAT Y
-1 NOTE (Raymond Skinner, “The Declaration of Ley,” 102)
+1 NOTE Bio notes: (Raymond Skinner, “The Declaration of Ley,” 102)
 1 FAMS @F9@
 0 @I34@ INDI
 1 NAME Penelope /Capel/
@@ -596,7 +624,7 @@
 2 DATE 1581
 1 DEAT
 2 DATE 1611
-1 NOTE b.1581 d.1611
+1 NOTE Bio notes: b.1581 d.1611
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 1 FAMS @F3@
@@ -609,7 +637,7 @@
 2 DATE 1575
 1 DEAT
 2 DATE 1626
-1 NOTE b.1575 d.1626
+1 NOTE Bio notes: b.1575 d.1626
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 41)
 1 FAMS @F3@
@@ -622,7 +650,7 @@
 1 SEX F
 1 DEAT
 2 DATE 1620
-1 NOTE family tree image
+1 NOTE Bio notes: family tree image
 1 FAMS @F10@
 0 @I37@ INDI
 1 NAME Edward /Pulter/
@@ -634,7 +662,7 @@
 2 DATE 1586
 1 DEAT
 2 DATE 1626
-1 NOTE Family tree image
+1 NOTE Bio notes: Family tree image
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 43)
@@ -645,7 +673,7 @@
 2 SURN Forester
 2 _MARNM Forester
 1 SEX M
-1 NOTE (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
+1 NOTE Bio notes: (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 42)
 1 FAMS @F4@
 0 @I39@ INDI
@@ -658,7 +686,7 @@
 2 DATE 1660
 1 DEAT
 2 DATE 1696
-1 NOTE (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
+1 NOTE Bio notes: (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 42)
 1 FAMS @F11@
 1 FAMC @F4@
@@ -669,7 +697,7 @@
 2 _MARNM Chauncy
 1 SEX F
 1 DEAT Y
-1 NOTE Martha Chauncy was the third daughter of Henry Chauncy who wrote "The Historical Antiquities of Hertfordshire (1700)" a comprehensive history of the area and its elite families.
+1 NOTE Bio notes: Martha Chauncy was the third daughter of Henry Chauncy who wrote "The Historical Antiquities of Hertfordshire (1700)" a comprehensive history of the area and its elite families.
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 42-43)
@@ -682,7 +710,7 @@
 1 SEX M
 1 DEAT
 2 DATE 1753
-1 NOTE (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
+1 NOTE Bio notes: (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 111)
 2 CONT
 2 CONT d.1753
@@ -699,7 +727,7 @@
 1 SEX F
 1 DEAT
 2 DATE 1762
-1 NOTE d.1762
+1 NOTE Bio notes: d.1762
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 99)
 2 CONT see footnote
@@ -712,7 +740,7 @@
 1 SEX M
 1 DEAT
 2 DATE 1768
-1 NOTE d. 1768
+1 NOTE Bio notes: d. 1768
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 99)
 2 CONT see footnote
@@ -726,7 +754,7 @@
 1 SEX F
 1 DEAT
 2 DATE 1779
-1 NOTE d. 1779
+1 NOTE Bio notes: d. 1779
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 99)
 2 CONT see footnote
@@ -741,7 +769,7 @@
 2 DATE 1627
 1 DEAT
 2 DATE 1700
-1 NOTE Other than Pulter's work, John Harrington provides us with the most biographical information about Hester Pulter and her family. He kept a detailed journal for many years. One of his most notable subjects is the Pulter family. Specific
+1 NOTE Bio notes: Other than Pulter's work, John Harrington provides us with the most biographical information about Hester Pulter and her family. He kept a detailed journal for many years. One of his most notable subjects is the Pulter family. Specific
 2 CONC ally, how kinship bonds remained strong even during the political tension of the English Civil War. Harrington serverd as the M.P. (member of parliament) from Kelston in Somerset. (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Embl
 2 CONC emes,’” Volume 1,  ProQuest
 2 CONT Dissertations Publishing, 2008, 65-66).
@@ -759,7 +787,7 @@
 2 _MARNM Mundy
 1 SEX F
 1 DEAT Y
-1 NOTE Millicent Mundy was the niece of Anne Mundy. The estate was left to her and her husband Captain Richard French.
+1 NOTE Bio notes: Millicent Mundy was the niece of Anne Mundy. The estate was left to her and her husband Captain Richard French.
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’" Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 99)
@@ -773,7 +801,7 @@
 2 _MARNM French
 1 SEX M
 1 DEAT Y
-1 NOTE (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
+1 NOTE Bio notes: (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 99)
 2 CONT see footnote
 1 FAMS @F14@
@@ -785,7 +813,7 @@
 1 SEX M
 1 DEAT
 2 DATE 1843
-1 NOTE Richard Forrester French died without children. The Broadfield estate was sold outside of the Pulter family lineage in 1843.
+1 NOTE Bio notes: Richard Forrester French died without children. The Broadfield estate was sold outside of the Pulter family lineage in 1843.
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
 2 CONT Dissertations Publishing, 2008, 99)
@@ -798,7 +826,7 @@
 1 SEX F
 1 DEAT
 2 DATE 1682
-1 NOTE Amy Gumbleton (Pulter) was the wife of Arthur Pulter until 1680 when she married Arabella Hunt by assuming a new identity as a man named James Howard. The marriage lasted for six months and was broken by Hunt who pursued a libel case a
+1 NOTE Bio notes: Amy Gumbleton (Pulter) was the wife of Arthur Pulter until 1680 when she married Arabella Hunt by assuming a new identity as a man named James Howard. The marriage lasted for six months and was broken by Hunt who pursued a libel case a
 2 CONC gainst Gumbleton. Arthur Pulter died in 1680, and Amy Gumbleton died in 1682 five weeks after the libel case was sentenced. This is the only documented marriage between two women in England during the 17th century.
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
@@ -814,7 +842,7 @@
 2 DATE 1662
 1 DEAT
 2 DATE 1705
-1 NOTE Arabella Hunt was a famous entertainer within the English court at the time of her marriage to James Howard/Amy Gumbleton. Throughout her life she was well known for her beauty and her talent as a singer, luntnist, and teacher. She nev
+1 NOTE Bio notes: Arabella Hunt was a famous entertainer within the English court at the time of her marriage to James Howard/Amy Gumbleton. Throughout her life she was well known for her beauty and her talent as a singer, luntnist, and teacher. She nev
 2 CONC er remarried after her marriage with Gumbleton was annulled.
 2 CONT (Mendelson, Sara H. "Hunt, Arabella (1662–1705), singer and musician." Oxford Dictionary of National Biography. 23 Sep. 2004; Accessed 17 Jul. 2023. https://www-oxforddnb-com.turing.library.northwestern.edu/view/10.1093/ref:odnb/9780198614128.001
 2 CONC .0001/odnb-9780198614128-e-14190.)
@@ -833,7 +861,7 @@
 2 GIVN James
 2 SURN Ley
 1 SEX M
-1 NOTE The third Earl of Marlborough.
+1 NOTE Bio notes: The third Earl of Marlborough.
 2 CONT After the death of James Ley the earldom was passed on to Henry Ley's younger brother William Ley.
 2 CONT
 2 CONT (Eardley, Alice, “An Edition of Lady Hester Pulter’s Book of ‘Emblemes,’” Volume 1, ProQuest
@@ -957,6 +985,16 @@
 0 @F16@ FAM
 1 HUSB @I21@
 1 CHIL @I51@
+0 @X11@ SOUR
+1 TITL [Source Title]
+1 ABBR [Source Abbreviation]
+1 AUTH [Source Author]
+1 PUBL [Source Publication]
+1 TEXT [Source Text Text Text]
+1 CHAN
+2 DATE 12 SEP 2023
+3 TIME 16:28:25
+2 _WT_USER admin
 0 @X8@ OBJE
 1 FILE https://pulterproject.northwestern.edu/family-tree/build/img/hester-pulter.jpg
 2 TITL Image for Hester Pulter
